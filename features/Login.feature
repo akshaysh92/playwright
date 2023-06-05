@@ -1,18 +1,18 @@
 Feature: Login functionality
 
     Scenario: Verify user is able to Login with valid credentials
-        Given User navigate to site
+        Given User navigate to site "https://www.testyou.in/index.aspx" url
         And User click login button
         And Login with "valid" credentials userName "" password ""
 
     Scenario: Verify user is unable to Login with invalid credentials 
-        Given User navigate to site
+        Given User navigate to site "https://www.testyou.in/index.aspx" url
         And User click login button
         And Login with "invalid" credentials userName "invalidUser" password "invalidPassword"
         Then Verify validation messages "Userid or Password Not Match"
 
     Scenario: Verify user is able to receive validation over blank/mandatory fields
-        Given User navigate to site
+        Given User navigate to site "https://www.testyou.in/index.aspx" url
         And User click login button
         And Login with "invalid" credentials userName "" password ""
         Then Verify validation messages "Userid or Password Not Match"

@@ -1,15 +1,11 @@
 const {
   login,
   navigateTo,
-  createAccountButton,
-  createMyAccountButton,
   elementIsVisible,
-  showAnotherCode,
   loginButton,
   buyNowButton,
   customizeYourPackage,
   contactUsButton,
-  createAccount,
 } = require('../../stories/stories');
 const { Given, When } = require('cucumber');
 const { cast } = require('playwright-fluent');
@@ -19,10 +15,6 @@ const PricePage = require('../../PageObject/Login/PricePage');
 const CustomizeYourPackageData = require('../../testData/customizeYourPackageData');
 const CreateAccountPage = require('../../PageObject/Login/CreateAccountPage');
 const CreateAccountData = require('../../testData/createAccountData');
-
-Given('User navigate to site', async function () {
-  await cast(this.p).runStory(navigateTo, { url: 'https://www.testyou.in/index.aspx' });
-});
 
 Given('User click login button', async function () {
   await cast(this.p).runStory(loginButton, { selector: LoginPage.loginBtn });

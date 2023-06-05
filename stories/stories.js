@@ -11,6 +11,10 @@ const createAccountButton = async (p, props) => {
   await p.click(props.selector);
 };
 
+const keyIcon = async (p, props) => {
+  await p.click(props.selector);
+};
+
 const loginButton = async (p, props) => {
   await p.click(props.selector);
 };
@@ -141,5 +145,6 @@ module.exports = {
   contactUsButton,
   getSliderValue,
   createAccount,
+  keyIcon,
 };
 
