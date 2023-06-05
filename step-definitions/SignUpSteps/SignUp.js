@@ -1,6 +1,6 @@
 const CreateAccountPage = require("../../PageObject/Login/CreateAccountPage");
 const LoginPage = require("../../PageObject/Login/Login_SignupPage");
-const { createAccountButton, createAccount, createMyAccountButton, elementIsVisible } = require("../../stories/stories");
+const { createAccountButton, createAccount, createMyAccountButton, elementIsVisible, showAnotherCode } = require("../../stories/stories");
 const CreateAccountData = require("../../testData/createAccountData");
 const { Given, When, Then } = require('cucumber');
 const { cast } = require('playwright-fluent');
